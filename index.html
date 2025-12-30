@@ -6,7 +6,50 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ZentaroPlay</title>
 
-  <style>
+  <style>/* Bigger logo */
+logo {
+  width: 320px;
+  max-width: 90%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+/* Dark clean background */
+body {
+  background-color: #121212;
+  color: #eaeaea;
+}
+
+/* Header styling */
+header {
+  background-color: #1c1c1c;
+  padding: 40px 20px;
+  text-align: center;
+  border-bottom: 1px solid #333;
+}
+
+/* Game cards */
+.game-card {
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.5);
+  transition: transform 0.2s;
+}
+
+.game-card:hover {
+  transform: translateY(-5px);
+}
+
+.game-card button {
+  padding: 10px 22px;
+  background-color: #3a82f7;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
