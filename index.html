@@ -6,7 +6,63 @@
   <title>ZentaroPlay</title>
 <style>
   /* ===== Global ===== */
-  body {
+  body {<section style="text-align:center; margin-top:40px;">
+  <h2>🔥 Clicker Challenge</h2>
+
+  <p>Level: <span id="level">1</span></p>
+  <p>Points: <span id="points">0</span> / <span id="target">10</span></p>
+
+  <button id="clickBtn" style="
+    padding:15px 30px;
+    font-size:18px;
+    background:#1E90FF;
+    color:white;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+  ">
+    Click Me!
+  </button>
+
+  <p id="message" style="margin-top:15px; font-weight:bold;"></p>
+</section>
+
+<script>
+  let points = 0;
+  let level = 1;
+  let target = 10;
+
+  const pointsEl = document.getElementById("points");
+  const levelEl = document.getElementById("level");
+  const targetEl = document.getElementById("target");
+  const messageEl = document.getElementById("message");
+  const button = document.getElementById("clickBtn");
+
+  button.addEventListener("click", () => {
+    points++;
+    pointsEl.textContent = points;
+
+    if (points >= target) {
+      levelUp();
+    }
+  });
+
+  function levelUp() {
+    level++;
+    points = 0;
+    target = Math.floor(target * 1.5);
+
+    levelEl.textContent = level;
+    pointsEl.textContent = points;
+    targetEl.textContent = target;
+
+    messageEl.textContent = "🎉 Level Up! Welcome to Level " + level;
+
+    // small visual feedback
+    button.style.background = "#" + Math.floor(Math.random()*16777215).toString(16);
+  }
+</script>
+
     margin: 0;
     font-family: Arial, sans-serif;
     background:
