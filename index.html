@@ -85,107 +85,35 @@
   <main>
     <section class="games">
       <h2>Available Games</h2>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ZentaroPlay</title>
+<main>
+  <section class="games">
+    <h2>Available Games</h2>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #0f172a;
-      color: #e5e7eb;
-      text-align: center;
-    }
-
-    header {
-      background-color: #020617;
-      padding: 25px;
-      border-bottom: 2px solid #22c55e;
-    }
-
-    header h1 {
-      margin: 0;
-      color: #22c55e;
-    }
-
-    main {
-      padding: 30px 15px;
-    }
-
-    .game-card {
-      background: #020617;
-      max-width: 320px;
-      margin: 0 auto;
-      padding: 25px;
-      border-radius: 12px;
-      box-shadow: 0 0 15px rgba(34,197,94,0.25);
-    }
-
-    button {
-      background: #22c55e;
-      border: none;
-      padding: 12px 20px;
-      font-size: 16px;
-      border-radius: 8px;
-      cursor: pointer;
-      margin: 8px;
-    }
-
-    button:hover {
-      background: #16a34a;
-    }
-
-    footer {
-      margin-top: 40px;
-      font-size: 14px;
-      color: #94a3b8;
-    }
-  </style>
-</head>
-
-<body>
-
-  <header>
-    <h1>ZentaroPlay 🎮</h1>
-    <p>Free online games — no downloads</p>
-  </header>
-
-  <main>
     <div class="game-card">
-      <h2>Clicker Game</h2>
-      <p>Click the button to earn points</p>
+      <h3>Clicker Game 🎯</h3>
+      <p>Click the button to score points.</p>
 
       <h1 id="score">0</h1>
 
       <button onclick="addPoint()">Click</button>
       <button onclick="resetScore()">Reset</button>
     </div>
-  </main>
+  </section>
+</main>
 
-  <footer>
-    © 2025 ZentaroPlay
-  </footer>
+<script>
+  let score = 0;
 
-  <script>
-    let score = 0;
+  function addPoint() {
+    score++;
+    document.getElementById("score").textContent = score;
+  }
 
-    function addPoint() {
-      score++;
-      document.getElementById("score").textContent = score;
-    }
-
-    function resetScore() {
-      score = 0;
-      document.getElementById("score").textContent = score;
-    }
-  </script>
-
-</body>
-</html>
+  function resetScore() {
+    score = 0;
+    document.getElementById("score").textContent = score;
+  }
+</script>
 
     
     </section>
